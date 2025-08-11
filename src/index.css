@@ -1,0 +1,68 @@
+/* index.css (global styles and reset) */
+
+:root {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Your primary color palette */
+  --color-primary-dark: #023059;
+  --color-primary: #023859;
+  --color-accent: #52B3D9;
+  --color-success: #8BBF65;
+  --color-background: #F2EFE9;
+  --color-text: #082c4b;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Optional: override input and button focus styles for consistency */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  outline-color: var(--color-accent);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove dark/light theme overrides unless you're using them intentionally */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+}

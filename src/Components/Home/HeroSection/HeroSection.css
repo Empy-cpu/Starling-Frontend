@@ -1,0 +1,82 @@
+/* Hero Section */
+.hero-section-home {
+  padding: 120px 0 180px 0;
+  text-align: center;
+  background: url('/Images/four.jpg') center/cover no-repeat;
+ 
+}
+
+.hero-content-home {
+  max-width: 1000px;
+  margin: 55px auto;
+}
+
+.hero-title-home {
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  color: #081F54 !important;
+  margin-bottom: 24px !important;
+  line-height: 1.2 !important;
+}
+
+
+.hero-subtitle-home {
+  color: #fafafa !important;
+  margin-bottom: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0 60px 0;
+  flex-wrap: wrap;
+}
+
+.hero-chip-home {
+  background-color: #74bd576a !important;
+  color: #023362 !important;
+  font-weight: 600 !important;
+  border: 1px solid #023362 !important;
+}
+
+.hero-chip-home .MuiChip-icon {
+  color:  #023362!important;
+}
+
+.hero-actions-home {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 100px 0 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+  }
+}

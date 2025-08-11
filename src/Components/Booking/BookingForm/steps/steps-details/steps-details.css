@@ -1,0 +1,44 @@
+.step-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.step-service .extras-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.step-service .extra-card {
+  border: 1px solid #48ac3a;
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-width: 120px;
+  text-align: center;
+}
+
+.step-service .quantity-controls {
+   color: #0a0000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-service .extra-label {
+    color: rgb(19, 0, 0); 
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.step-service .extra-price {
+  font-size: 0.85rem;
+  color: rgb(19, 0, 0);
+}
+.booking-form-label {
+  color: #0a0000; /* or use a theme color like #000, #444, etc. */
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,86 @@
+
+/* Hero section with background (placeholder grey) */
+.hero-section-steps {
+  width: 100%;
+  min-height: 360px;
+  background-color: #00000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+  background-image: url('/Images/two.jpg')
+}
+
+/* Steps container for horizontal layout */
+.steps-container {
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+/* Individual step card */
+.step-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 230px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Step number (circle avatar style) */
+.step-number {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 8px auto;
+  border-radius: 50%;
+  background-color: #e4ecf0; /* MUI primary color */
+  color: rgb(8, 5, 5);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Material UI Icon styling */
+.step-icon {
+  font-size: 50px;
+  color: #7fbf61;
+  margin-bottom: 8px;
+}
+
+/* Label below icon */
+.step-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+/* Existing styles omitted for brevity — keep all previous ones */
+
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+}
+
+/* Heading above the steps */
+.steps-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: #85ff47;
+}
+
+/* Subtext under heading */
+.steps-subtext {
+  font-size: 1.5rem;
+  color: #20440d;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,60 @@
+/* Final CTA Section */
+.final-cta-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #6e6e6e, #5a5a5a);
+  color: white;
+  text-align: center;
+}
+
+.final-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.final-cta-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+}
+
+.final-cta-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 40px !important;
+  font-weight: 400 !important;
+}
+
+.final-cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-text {
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 8px !important;
+}
+
+.contact-phone {
+  color: #74BD57 !important;
+  font-weight: 700 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 80px 0;
+  }
+
+  .final-cta-title {
+    font-size: 2rem !important;
+  }
+
+  .final-cta-actions {
+    gap: 20px;
+  }
+}

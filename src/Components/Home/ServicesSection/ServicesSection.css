@@ -1,0 +1,103 @@
+/* Services Section */
+.services-section {
+  padding: 60px 0;
+ background: linear-gradient(to right, #0e4374, #0d2764);
+
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.section-title-home-services{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff !important;
+  font-weight: bold !important;
+  text-align: center;
+}
+
+.section-subtitle-services {
+  font-weight: bold !important;
+  font-size: 1.2rem;
+  color: #ffffff !important;
+  margin-bottom: 60px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+
+.service-card {
+  background-color: #fffdf9 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #081F54 !important;
+  transition: all 0.3s ease !important;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold !important;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  border-color: rgba(186, 255, 57, 0.3) !important;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #081F54, #023362);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.service-icon svg {
+  font-size: 2.5rem;
+  color: #FEFBF2;
+}
+
+.service-title {
+  color: #081F54 !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+}
+
+.service-description {
+  color: #023362 !important;
+  margin-bottom: 20px !important;
+  line-height: 1.6;
+}
+
+.service-price {
+  color: #74BD57 !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+}
+
+.service-button {
+  color: #081F54 !important;
+  border-color: #081F54 !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.service-button:hover {
+  background-color: #74bd5781 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section {
+    padding: 60px 0;
+  }
+}

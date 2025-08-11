@@ -1,0 +1,217 @@
+/* Jobs Section */
+.jobs-section {
+  padding: 60px 0;
+  background: url('/Images/three.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.jobs-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.job-intro {
+  display: flex;
+  align-items: flex-start;
+}
+
+.intro-card {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(186, 255, 57, 0.2) !important;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(186, 255, 57, 0.1), rgba(186, 255, 57, 0.05)) !important;
+}
+
+.intro-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #74BD57, #9fe01b);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.intro-icon svg {
+  font-size: 2.5rem;
+  color: #023362;
+}
+
+.intro-title {
+  color: #023362 !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+}
+
+.intro-description {
+  color: #023362 !important;
+  line-height: 1.6;
+  margin-bottom: 24px !important;
+}
+
+
+
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.subsection-title {
+  color: #023362 !important;
+  font-weight: 600 !important;
+  margin-bottom: 24px !important;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(186, 255, 57, 0.1) !important;
+  transition: all 0.3s ease !important;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(186, 255, 57, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.benefit-icon svg {
+  font-size: 1.5rem;
+  color: #74BD57;
+}
+
+.benefit-title {
+  color: #6e6e6e !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  font-size: 1rem !important;
+}
+
+.benefit-description {
+  color: #666 !important;
+  line-height: 1.5;
+  font-size: 0.9rem !important;
+}
+
+.requirements-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(186, 255, 57, 0.1) !important;
+}
+
+.requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.requirement-icon {
+  color: #74BD57 !important;
+  font-size: 1.2rem !important;
+  flex-shrink: 0;
+}
+
+.requirement-text {
+  color: #666 !important;
+  line-height: 1.5;
+}
+
+.jobs-cta {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(186, 255, 57, 0.2);
+}
+
+.cta-title {
+  color: #6e6e6e !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+}
+
+.cta-subtitle {
+  color: #666 !important;
+  margin-bottom: 32px !important;
+  font-size: 1.1rem !important;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .jobs-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs-section {
+    padding: 60px 0;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-title {
+    font-size: 1.75rem !important;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem !important;
+  }
+}

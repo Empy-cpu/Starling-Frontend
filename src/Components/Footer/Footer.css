@@ -1,0 +1,195 @@
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #023059, #023859);
+  color: #F2EFE9;
+  padding: 60px 0 20px 0;
+  max-height: 2700px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  color: #8BBF65 !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+.footer-tagline {
+  color: #F2EFE9 !important;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-icon {
+  background-color: rgba(82, 179, 217, 0.15) !important;
+  color: #52B3D9 !important;
+  transition: all 0.3s ease !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.social-icon:hover {
+  background-color: #8BBF65 !important;
+  color: #023059 !important;
+}
+
+
+
+.social-icon.facebook:hover {
+  background-color: #1877f2 !important;
+  color: #F2EFE9 !important;
+}
+
+.social-icon.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+  color: #F2EFE9 !important;
+}
+
+.social-icon.linkedin:hover {
+  background-color: #0077b5 !important;
+  color: #F2EFE9 !important;
+}
+
+.footer-section-title {
+  color: #8BBF65 !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.contact-item .MuiTypography-root {
+  color: #F2EFE9 !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+.contact-icon {
+  color: #52B3D9 !important;
+  font-size: 1.2rem !important;
+}
+
+.footer-services,
+.footer-company {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-link {
+  color: #F2EFE9 !important;
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-link:hover {
+  color: #8BBF65 !important;
+  padding-left: 5px;
+}
+
+.footer-divider {
+  background-color: rgba(139, 191, 101, 0.3) !important;
+  margin: 30px 0 !important;
+  height: 2px !important;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copyright {
+  color: rgba(242, 239, 233, 0.7) !important;
+  font-size: 0.9rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-legal {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-legal {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

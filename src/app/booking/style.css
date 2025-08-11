@@ -1,0 +1,33 @@
+.booking-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(238, 238, 238);
+}
+
+.hero-section {
+  padding: 2rem 1rem;
+}
+
+.booking-layout {
+  display: flex;
+  align-items: flex-start; /* Ensures top alignment */
+  justify-content: center;
+  padding: 2rem;
+  gap: 0.7rem; /* Space between form and card */
+}
+
+.booking-form-wrapper {
+  flex: 0 0 700px; /* Fixed width */
+  margin-left:270px;
+  margin-top:0px;
+ 
+}
+
+.booking-summary-wrapper {
+  position: sticky;
+  top: 7rem;
+  width: 260px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.183);
+  border-radius: 16px;
+}

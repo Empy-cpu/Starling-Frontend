@@ -1,0 +1,439 @@
+/* Navbar Styles with new color theme */
+.navbar {
+  background-color:#FEFBF2!important; /* Dim grey navbar */
+  color: #023362!important; /* White text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  position: fixed !important; /* Fixed to top */
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1100 !important; /* High z-index to stay on top */
+}
+
+.toolbar {
+  justify-content: space-between;
+  padding: 8px 16px; /* Reduced padding */
+  min-height: 70px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+/* Logo image as background */
+.logo-image {
+  width: 120px;             /* or adjust based on design */
+  height: 48px;             /* match your navbar height */
+  background-image: url("/Images/NEW_STARLING_LOGO.jpg"); /* path relative to public folder */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+
+
+.logo-text {
+  font-weight: 700 !important;
+  color: #023362!important; /* Yellow-green logo */
+  letter-spacing: 0.5px;
+  font-size: 1.25rem !important; /* Back to original size */
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop Navigation Menu - Always center */
+.desktop-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Reduced gap */
+  flex-grow: 1;
+  justify-content: center;
+  margin: 0 20px; /* Reduced margin */
+  max-width: 600px; /* Reduced max-width */
+}
+
+.nav-item-container {
+  position: relative;
+}
+
+.nav-item {
+  color: #023362!important; /* White nav items */
+  text-transform: none !important;
+  font-weight: bold !important;
+  padding: 5px 13px !important; /* Reduced padding */
+  border-radius: 4px !important;
+  white-space: nowrap;
+  font-size: 0.95rem !important; /* Back to original size */
+  transition: all 0.3s ease !important;
+  min-width: auto;
+}
+
+.nav-item:hover {
+  background-color: #74BD576f !important; /* Yellow-green hover */
+  color: #023362 !important; /* Yellow-green text on hover */
+}
+
+.services-dropdown .MuiPaper-root {
+  margin-top: 8px;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.34) !important;
+  background-color: #FEFBF2!important; 
+}
+
+.dropdown-item {
+  padding: 12px 20px !important;
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+  color: #023362 !important; /* White dropdown text */
+}
+
+.dropdown-item:hover {
+  background-color: #74bd578a !important; /* Yellow-green hover */
+  color: #023362!important; /* Yellow-green text on hover */
+}
+
+/* Desktop Navigation Actions - Always right */
+.desktop-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Reduced gap */
+  flex-shrink: 0;
+  min-width: 240px; /* Reduced minimum width */
+  justify-content: flex-end;
+}
+
+.phone-section {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px; /* Back to original padding */
+  background-color: #FEFBF2; /* Semi-transparent white */
+  border-radius: 20px; /* Back to original */
+  border: 1px solid #023362;
+  min-width: 120px; /* Reduced minimum width */
+}
+
+.phone-icon {
+  font-size: 16px; /* Back to original size */
+  color: #023362; /* Yellow-green phone icon */
+}
+
+.phone-number {
+  color: #023362 !important; /* White phone number */
+  font-weight: bold !important;
+  font-size: 1.0rem !important;
+  white-space: nowrap;
+}
+
+.phone-section:hover {
+  background-color: #74BD576f !important; /* Semi-transparent white on hover */
+}
+
+.login-btn {
+  color: #023362 !important; /* White login text */
+  text-transform: none !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important; /* Back to original padding */
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  min-width: 70px; /* Reduced minimum width */
+}
+
+.login-btn:hover {
+  background-color:#74bd576f !important; /* Yellow-green hover */
+  color: #0d477d !important; /* Yellow-green text on hover */
+}
+
+.book-now-btn {
+  background: #74BD57 !important; /* Yellow-green gradient */
+  color: #023362!important; /* Dim grey text for contrast */
+  text-transform: none !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important; /* Reduced padding */
+  border-radius: 25px !important; /* Back to original */
+  box-shadow: 0 2px 8px rgba(186, 255, 57, 0.4) !important;
+  white-space: nowrap;
+  transition: all 0.3s ease !important;
+  min-width: 100px; /* Reduced minimum width */
+}
+
+.book-now-btn:hover {
+  background: #8bda6d !important;
+  color: #064a89!important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 12px #315821 !important;
+  transform: translateY(-1px);
+}
+
+/* Mobile Styles */
+.mobile-menu-btn {
+  color: #023059 !important; /* Dark blue menu button */
+}
+
+.mobile-drawer-container .MuiDrawer-paper {
+  box-sizing: border-box;
+  width: 280px;
+  background: linear-gradient(135deg, #023059, #023859) !important;
+  color: #F2EFE9 !important;
+}
+
+.mobile-drawer {
+  width: 100%;
+  padding: 20px 16px;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(139, 191, 101, 0.3);
+}
+
+.drawer-header .MuiIconButton-root {
+  color: #8BBF65 !important;
+}
+
+.mobile-phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: rgba(139, 191, 101, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid rgba(139, 191, 101, 0.3);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobile-phone:hover {
+  background-color: rgba(139, 191, 101, 0.2);
+}
+
+.phone-text {
+  color: #F2EFE9 !important;
+  font-weight: 600 !important;
+}
+
+.mobile-divider {
+  margin: 16px 0 !important;
+  background-color: rgba(139, 191, 101, 0.3) !important;
+  height: 1px !important;
+}
+
+.mobile-nav-item {
+  padding: 4px 0 !important;
+  margin-bottom: 4px;
+}
+
+.mobile-nav-btn {
+  color: #F2EFE9 !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  text-transform: none !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-weight: 500 !important;
+}
+
+.mobile-nav-btn:hover {
+  background-color: rgba(139, 191, 101, 0.1) !important;
+  color: #8BBF65 !important;
+  padding-left: 20px !important;
+}
+
+.mobile-login-btn {
+  color: #F2EFE9 !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  text-transform: none !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-weight: 500 !important;
+  margin-top: 8px;
+}
+
+.mobile-login-btn:hover {
+  background-color: rgba(139, 191, 101, 0.1) !important;
+  color: #8BBF65 !important;
+  padding-left: 20px !important;
+}
+
+.mobile-book-btn {
+  background: linear-gradient(135deg, #8BBF65, #74BD57) !important;
+  color: #023059 !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  padding: 12px 24px !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  margin-top: 16px;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mobile-book-btn:hover {
+  background: linear-gradient(135deg, #74BD57, #8BBF65) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: none;
+  color: #023362 !important;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+.welcomeMessage:hover {
+  background-color: #e6f4e6;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .desktop-nav-menu {
+    gap: 14px;
+    margin: 0 16px;
+  }
+
+  .desktop-nav-actions {
+    gap: 10px;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .desktop-nav-menu {
+    gap: 12px;
+    margin: 0 12px;
+  }
+
+  .nav-item {
+    padding: 8px 12px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .desktop-nav-actions {
+    gap: 8px;
+    min-width: 200px;
+  }
+
+  .phone-section {
+    padding: 6px 10px;
+    min-width: 110px;
+  }
+
+  .book-now-btn {
+    padding: 8px 16px !important;
+    min-width: 90px;
+  }
+
+  .login-btn {
+    padding: 6px 12px !important;
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .phone-section {
+    display: none;
+  }
+
+  .desktop-nav-actions {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.1rem !important;
+  }
+
+  .toolbar {
+    min-height: 60px !important;
+    padding: 8px 12px;
+  }
+
+  .logo-section {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1rem !important;
+  }
+
+  .toolbar {
+    padding: 8px 8px;
+  }
+
+  .logo-section {
+    min-width: 80px;
+  }
+}
+
+/* Ultra-wide screens (1920px+) */
+@media (min-width: 1920px) {
+  .toolbar {
+    padding: 8px 40px; /* Reduced from 60px */
+  }
+
+  .desktop-nav-menu {
+    gap: 24px; /* Reduced from 32px */
+    margin: 0 40px; /* Reduced from 60px */
+    max-width: 800px; /* Reduced from 1000px */
+  }
+
+  .nav-item {
+    padding: 10px 18px !important; /* Reduced from 24px */
+    font-size: 1rem !important; /* Reduced from 1.1rem */
+  }
+
+  .desktop-nav-actions {
+    gap: 18px; /* Reduced from 24px */
+    min-width: 280px; /* Reduced from 350px */
+  }
+
+  .logo-text {
+    font-size: 1.3rem !important; /* Reduced from 1.5rem */
+  }
+
+  .phone-section {
+    padding: 10px 16px; /* Reduced from 20px */
+    min-width: 140px; /* Reduced from 160px */
+  }
+
+  .book-now-btn {
+    padding: 12px 24px !important; /* Reduced from 32px */
+    min-width: 120px; /* Reduced from 140px */
+  }
+}
+
+/* Body padding to account for fixed navbar */
+body {
+  padding-top: 70px; /* Add padding to prevent content from hiding behind navbar */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Smaller padding for mobile */
+  }
+}

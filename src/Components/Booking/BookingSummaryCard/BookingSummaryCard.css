@@ -1,0 +1,15 @@
+.booking-summary-card {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #fdfbf2;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.total-row {
+  font-weight: bold;
+}

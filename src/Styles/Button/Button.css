@@ -1,0 +1,33 @@
+/* buttons.css */
+.stl-button-home {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-transform: none;
+  transition: all 0.2s ease-in-out;
+
+}
+
+/* For contained (primary) buttons */
+.stl-button-home.primary {
+  background-color: #74BD57; /* Amber-500 or custom */
+  color: #081F54;
+  font-weight: bold !important;
+}
+
+.stl-button-home.primary:hover {
+  background-color: #000000; /* Amber-600 */
+}
+
+/* For outlined (secondary) buttons */
+.stl-button.secondary {
+  border: 2px solid #081F54; /* Amber-500 */
+  color: #081F54;
+  background-color: transparent;
+  font-weight: bold !important;
+}
+
+.stl-button.secondary:hover {
+  background-color: #74bd57a6; /* Light amber hover */
+}

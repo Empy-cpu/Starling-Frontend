@@ -1,0 +1,51 @@
+/* Areas Section */
+.areas-section {
+  padding: 60px 0;
+  background-image: url('/Images/two.jpg');
+}
+
+.areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.area-chip {
+  background-color: #74bd5763 !important;
+  color: #081F54 !important;
+  border-color: #081F54 !important;
+  font-weight: bold !important;
+  padding: 8px 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.area-chip:hover {
+  background-color: rgba(186, 255, 57, 0.1) !important;
+  border-color: #081F54 !important;
+}
+
+.area-chip .MuiChip-icon {
+  color: #081F54 !important;
+}
+
+.areas-cta {
+  text-align: center;
+}
+
+.areas-cta-text {
+  color: #666 !important;
+  font-size: 1.1rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .areas-section {
+    padding: 60px 0;
+  }
+
+  .areas-grid {
+    justify-content: center;
+  }
+}
