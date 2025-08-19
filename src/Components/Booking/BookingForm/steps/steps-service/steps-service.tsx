@@ -13,6 +13,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import type { BookingFormValues } from "@/types/booking-form";
+import type { FormErrors } from "@/utils/booking-validation";
 import { useBookingStore } from "@/store/useBookingStore";
 import type { ServicePricing, CleaningService } from "@/types/booking-services";
 import "./steps-service.css";
@@ -25,6 +26,7 @@ interface StepServiceProps {
   ) => void;
   onUpdateExtra: (key: string, delta: number) => void;
   availableServices: CleaningService[];
+  errors: FormErrors;
 }
 
 const StepService: React.FC<StepServiceProps> = ({
@@ -32,6 +34,7 @@ const StepService: React.FC<StepServiceProps> = ({
   onChange,
   onUpdateExtra,
   availableServices,
+  errors,
 }) => {
   const { getFilteredExtras } = useBookingStore();
 
@@ -59,6 +62,8 @@ const StepService: React.FC<StepServiceProps> = ({
         onChange={handleServiceChange}
         SelectProps={{ MenuProps: { disableScrollLock: true } }}
         sx={{ mb: 3 }}
+        error={!!errors.service}
+        helperText={errors.service}
       >
         {availableServices.map((service: CleaningService) => (
           <MenuItem key={service.serviceId} value={service.name}>
@@ -83,6 +88,8 @@ const StepService: React.FC<StepServiceProps> = ({
         }}
         sx={{ mb: 2 }}
         disabled={!formValues.service}
+        error={!!errors.size}
+        helperText={errors.size}
       >
         {(() => {
           // Get the selected service

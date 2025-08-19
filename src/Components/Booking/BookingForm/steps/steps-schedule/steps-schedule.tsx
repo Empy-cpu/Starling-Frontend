@@ -13,6 +13,7 @@ import {
   paymentMethods,
 } from "@/constants/BookingConstants";
 import type { BookingFormValues } from "@/types/booking-form";
+import type { FormErrors } from "@/utils/booking-validation";
 
 import "./steps-schedule.css";
 
@@ -22,11 +23,13 @@ interface StepScheduleProps {
     field: K,
     value: BookingFormValues[K]
   ) => void;
+  errors: FormErrors;
 }
 
 const StepSchedule: React.FC<StepScheduleProps> = ({
   formValues,
   onChange,
+  errors,
 }) => {
   const [isClient, setIsClient] = React.useState(false);
   const [initialized, setInitialized] = React.useState(false);
@@ -47,11 +50,11 @@ const StepSchedule: React.FC<StepScheduleProps> = ({
       <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DatePicker
-            label="Select Date"
+            label="Select a Date"
             value={formValues.date ? new Date(formValues.date) : null}
-            onChange={(newDate: Date | null) => {
-              if (newDate) {
-                const formatted = newDate.toISOString().split("T")[0];
+            onChange={(newValue) => {
+              if (newValue) {
+                const formatted = newValue.toISOString().split("T")[0];
                 onChange("date", formatted);
               }
             }}
@@ -59,7 +62,9 @@ const StepSchedule: React.FC<StepScheduleProps> = ({
             slotProps={{
               textField: {
                 fullWidth: true,
-              } as TextFieldProps,
+                error: !!errors.date,
+                helperText: errors.date,
+              },
             }}
           />
         </LocalizationProvider>
@@ -71,6 +76,8 @@ const StepSchedule: React.FC<StepScheduleProps> = ({
           value={formValues.time}
           onChange={(e) => onChange("time", e.target.value)}
           SelectProps={{ MenuProps: { disableScrollLock: true } }}
+          error={!!errors.time}
+          helperText={errors.time}
         >
           {times.map((time) => (
             <MenuItem key={time} value={time}>
@@ -81,25 +88,30 @@ const StepSchedule: React.FC<StepScheduleProps> = ({
       </Box>
 
       {/* Frequency Selection */}
-      <FormLabel className="booking-form-label">How often?</FormLabel>
-      <Box className="frequency-options">
-        {cleaningFrequencies.map((option) => (
-          <Box
-            key={option.value}
-            className={`frequency-card${
-              formValues.frequency === option.value ? " selected" : ""
-            }`}
-            onClick={() => onChange("frequency", option.value)}
-          >
-            {option.label}
+      {formValues.service !== 'End of Lease Cleaning' && (
+        <>
+          <FormLabel className="booking-form-label" error={!!errors.frequency}>How often?</FormLabel>
+          <Box className="frequency-options">
+            {cleaningFrequencies.map((option) => (
+              <Box
+                key={option.value}
+                className={`frequency-card${
+                  formValues.frequency === option.value ? " selected" : ""
+                }`}
+                onClick={() => onChange("frequency", option.value)}
+              >
+                {option.label}
+              </Box>
+            ))}
           </Box>
-        ))}
-      </Box>
+          {errors.frequency && <Typography color="error" variant="caption" sx={{ display: 'block', mt: 0.5 }}>{errors.frequency}</Typography>}
+        </>
+      )}
 
       {/* Payment Selection - Only render on client side */}
       {isClient && (
         <>
-          <FormLabel className="booking-form-label" sx={{ mt: 3 }}>
+          <FormLabel className="booking-form-label" sx={{ mt: 3 }} error={!!errors.payment}>
             Select Payment Method
           </FormLabel>
           <Box className="frequency-options">
@@ -115,6 +127,7 @@ const StepSchedule: React.FC<StepScheduleProps> = ({
               </Box>
             ))}
           </Box>
+          {errors.payment && <Typography color="error" variant="caption" sx={{ display: 'block', mt: 0.5 }}>{errors.payment}</Typography>}
         </>
       )}
 

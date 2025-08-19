@@ -10,6 +10,8 @@ import {
   Radio,
 } from "@mui/material";
 import type { BookingFormValues } from "@/types/booking-form";
+import type { FormErrors } from "@/utils/booking-validation";
+import { Typography } from "@mui/material";
 import { getCurrentUser } from "@/services/Auth/auth";
 import "./steps-details.css";
 
@@ -19,11 +21,10 @@ interface StepDetailsProps {
     field: K,
     value: BookingFormValues[K]
   ) => void;
+  errors: FormErrors;
 }
 
-const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
-  const [emailError, setEmailError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
+const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange, errors }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   
   const handleUserUpdate = useCallback(async () => {
@@ -55,33 +56,6 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
     handleUserUpdate();
   }, [handleUserUpdate]);
 
-  const validateEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const validatePhone = (phone: string) => {
-    const phoneRegex = /^\+?\d{10,15}$/; // Allows optional + and 10–15 digits
-    return phoneRegex.test(phone);
-  };
-
-  const handleEmailChange = (value: string) => {
-    onChange("email", value);
-    if (!validateEmail(value)) {
-      setEmailError("Please enter a valid email address.");
-    } else {
-      setEmailError("");
-    }
-  };
-
-  const handlePhoneChange = (value: string) => {
-    onChange("phone", value);
-    if (!validatePhone(value)) {
-      setPhoneError("Please enter a valid phone number (10–15 digits).");
-    } else {
-      setPhoneError("");
-    }
-  };
 
   return (
     <Box className="step-details">
@@ -91,6 +65,8 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
         value={formValues.name}
         onChange={(e) => onChange("name", e.target.value)}
         disabled={isLoggedIn}
+        error={!!errors.name}
+        helperText={errors.name}
         sx={{ mb: 2, '& .MuiInputBase-input.Mui-disabled': {
           WebkitTextFillColor: '#000000', // Keep text color black when disabled
           backgroundColor: 'rgba(0, 0, 0, 0.02)' // Slight gray background to indicate disabled state
@@ -102,9 +78,9 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
         type="email"
         fullWidth
         value={formValues.email}
-        onChange={(e) => handleEmailChange(e.target.value)}
-        error={!!emailError}
-        helperText={emailError}
+        onChange={(e) => onChange("email", e.target.value)}
+        error={!!errors.email}
+        helperText={errors.email}
         disabled={isLoggedIn}
         sx={{ 
           mb: 2,
@@ -119,9 +95,9 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
         label="Phone Number"
         fullWidth
         value={formValues.phone}
-        onChange={(e) => handlePhoneChange(e.target.value)}
-        error={!!phoneError}
-        helperText={phoneError}
+        onChange={(e) => onChange("phone", e.target.value)}
+        error={!!errors.phone}
+        helperText={errors.phone}
         disabled={isLoggedIn}
         sx={{ 
           mb: 2,
@@ -138,6 +114,8 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
         value={formValues.address}
         onChange={(e) => onChange("address", e.target.value)}
         sx={{ mb: 2 }}
+        error={!!errors.address}
+        helperText={errors.address}
       />
 
       <TextField
@@ -148,7 +126,7 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
         sx={{ mb: 2 }}
       />
 
-      <FormControl sx={{ mb: 2 }}>
+      <FormControl sx={{ mb: 2 }} error={!!errors.pets}>
         <FormLabel>Do you have pets?</FormLabel>
         <RadioGroup
           row
@@ -158,9 +136,10 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
           <FormControlLabel value="yes" control={<Radio />} label="Yes" />
           <FormControlLabel value="no" control={<Radio />} label="No" />
         </RadioGroup>
+        {errors.pets && <Typography color="error" variant="caption" sx={{ pl: 2 }}>{errors.pets}</Typography>}
       </FormControl>
 
-      <FormControl>
+      <FormControl error={!!errors.cleanedRecently}>
         <FormLabel>Has your home been cleaned recently?</FormLabel>
         <RadioGroup
           row
@@ -170,6 +149,7 @@ const StepDetails: React.FC<StepDetailsProps> = ({ formValues, onChange }) => {
           <FormControlLabel value="yes" control={<Radio />} label="Yes" />
           <FormControlLabel value="no" control={<Radio />} label="No" />
         </RadioGroup>
+        {errors.cleanedRecently && <Typography color="error" variant="caption" sx={{ pl: 2 }}>{errors.cleanedRecently}</Typography>}
       </FormControl>
     </Box>
   );

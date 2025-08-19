@@ -1,9 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Box, Button, Stepper, Step, StepLabel, Paper } from "@mui/material";
 import { stepsForm } from "@/constants/BookingConstants";
 import { useRouter } from "next/navigation";
 import { useBookingStore } from "@/store/useBookingStore";
+import { validateStep, type FormErrors } from "@/utils/booking-validation";
 
 import StepService from "./steps/steps-service/steps-service";
 import StepDetails from "./steps/steps-details/steps-details";
@@ -11,15 +12,14 @@ import StepSchedule from "./steps/steps-schedule/steps-schedule";
 
 const BookingForm: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [errors, setErrors] = useState<FormErrors>({});
   const router = useRouter();
-  
+
   // Get all necessary state and actions from the store
   const {
     formValues,
     updateField,
     updateExtras,
-    fetchBackendData,
-    validateForm,
     services,
   } = useBookingStore();
 
@@ -32,21 +32,43 @@ const BookingForm: React.FC = () => {
   };
 
   const handleNext = () => {
-    if (activeStep < stepsForm.length - 1) {
-      setActiveStep((prev) => prev + 1);
-    } else {
-      handleSubmit();
+    const validationErrors = validateStep(activeStep, formValues);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      if (activeStep < stepsForm.length - 1) {
+        setActiveStep((prev) => prev + 1);
+      } else {
+        handleSubmit();
+      }
     }
   };
 
-  const handleBack = () => setActiveStep((prev) => prev - 1);
+  const handleBack = () => {
+    setErrors({}); // Clear errors when going back
+    setActiveStep((prev) => prev - 1);
+  };
 
   const handleSubmit = () => {
-    if (!validateForm()) {
+    // Validate all steps before final submission
+    const allErrors: FormErrors = [0, 1, 2].reduce((acc, step) => {
+      const stepErrors = validateStep(step, formValues);
+      return { ...acc, ...stepErrors };
+    }, {});
+
+    if (Object.keys(allErrors).length > 0) {
+      // Find the first step with an error and navigate to it
+      const firstErrorStep = [0, 1, 2].find(
+        (step) => Object.keys(validateStep(step, formValues)).length > 0
+      );
+      if (firstErrorStep !== undefined) {
+        setActiveStep(firstErrorStep);
+        setErrors(validateStep(firstErrorStep, formValues));
+      }
       alert("Please complete all required fields before submitting.");
       return;
     }
-    router.push("/confirm-booking");
+    router.push("/booking-summary");
   };
 
   const renderStep = () => {
@@ -58,12 +80,13 @@ const BookingForm: React.FC = () => {
             availableServices={services}
             onChange={handleChange}
             onUpdateExtra={updateExtras}
+            errors={errors}
           />
         );
       case 1:
-        return <StepDetails formValues={formValues} onChange={handleChange} />;
+        return <StepDetails formValues={formValues} onChange={handleChange} errors={errors} />;
       case 2:
-        return <StepSchedule formValues={formValues} onChange={handleChange} />;
+        return <StepSchedule formValues={formValues} onChange={handleChange} errors={errors} />;
       default:
         return <div>Unknown step</div>;
     }
