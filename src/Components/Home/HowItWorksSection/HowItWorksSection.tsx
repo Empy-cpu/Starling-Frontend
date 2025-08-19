@@ -32,10 +32,10 @@ export default function HowItWorksSection() {
     <section className="how-it-works-section">
       <Container maxWidth="lg">
         <Box className="section-header">
-          <Typography variant="h2" className="section-title" sx={{ fontWeight: 'bold', color: '#081F54' }}>
+          <Typography variant="h2" className="section-title-how" >
             How to Book
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-how">
             Getting your space cleaned is as easy as 1-2-3
           </Typography>
         </Box>

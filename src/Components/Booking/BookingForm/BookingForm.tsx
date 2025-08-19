@@ -23,10 +23,6 @@ const BookingForm: React.FC = () => {
     services,
   } = useBookingStore();
 
-  // Fetch required data on component mount
-  useEffect(() => {
-    fetchBackendData();
-  }, [fetchBackendData]);
 
   const handleChange = <K extends keyof typeof formValues>(
     field: K,

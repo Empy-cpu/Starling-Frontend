@@ -53,7 +53,7 @@ const StepService: React.FC<StepServiceProps> = ({
       {/* Cleaning Service */}
       <TextField
         select
-        label="Cleaning Service"
+        label="Select your Cleaning Service"
         fullWidth
         value={formValues.service}
         onChange={handleServiceChange}
@@ -72,7 +72,7 @@ const StepService: React.FC<StepServiceProps> = ({
       <TextField
         select
         fullWidth
-        label="Size of your house"
+        label="Pick a Service to select house size"
         value={formValues.size || ''}
         onChange={(e) => onChange("size", e.target.value as string)}
         SelectProps={{ 

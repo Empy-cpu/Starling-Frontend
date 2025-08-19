@@ -1,7 +1,17 @@
 /* How It Works Section */
 .how-it-works-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #FEFBF2, rgba(246, 246, 101, 0.082));
+  background: #f2f6e8;
+}
+
+.section-title-how{
+  text-align: center;
+  color:#081F54;
+}
+.section-subtitle-how{
+  text-align: center;
+  color:#081F54;
+  padding-bottom: 4%;
 }
 
 .steps-container {

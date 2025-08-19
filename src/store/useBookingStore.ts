@@ -47,8 +47,10 @@ type BookingStore = {
   services: CleaningService[];    // List of available cleaning services
   extrasOptions: (Extra & { image?: string; description?: string })[]; // Available extras with UI assets
   loadingData: boolean;           // Loading state for async operations
+  isInitialized: boolean;         // Flag to prevent re-fetching data
 
   // Actions
+  initialize: (initialData: { services: CleaningService[]; extrasOptions: (Extra & { image?: string; description?: string })[] }) => void; // Initializes store with server-side data
   fetchBackendData: () => Promise<void>;  // Fetches services and extras from backend
   updateField: <K extends keyof BookingFormValues>(field: K, value: BookingFormValues[K]) => void; // Updates a form field
   updateExtras: (extraId: string, delta: number) => void; // Updates quantity of an extra service
@@ -112,12 +114,24 @@ export const useBookingStore = create<BookingStore>()((set, get) => ({
       services: [],                     // Available cleaning services
       extrasOptions: [],                // Available extras with UI assets
       loadingData: false,               // Loading state for async operations
+      isInitialized: false,             // Initially not initialized
 
       /**
        * Fetches required data from the backend and updates the store
        * Combines backend data with frontend assets
        */
+      initialize: (initialData) => {
+        set({
+          services: initialData.services,
+          extrasOptions: initialData.extrasOptions,
+          isInitialized: true,
+        });
+      },
+
       fetchBackendData: async () => {
+        const { isInitialized } = get();
+        if (isInitialized) return; // Do not fetch if already initialized
+
         set({ loadingData: true });
         try {
           // Fetch services and extras in parallel

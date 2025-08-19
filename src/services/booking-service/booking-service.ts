@@ -1,4 +1,5 @@
 import axios from "axios";
+import https from "https";
 import { API_BASE_URL } from "@/config/apiConfig";
 import { BookingRequestDto } from "@/types/booking-request-dto";
 import { BookingResponseDto } from "@/types/booking-response-dto";
@@ -10,12 +11,17 @@ import {
 
 // ---- Get All Cleaning Services ----
 export async function getCleaningServices(): Promise<CleaningService[]> {
+  const agent = new https.Agent({
+    rejectUnauthorized: false,
+  });
+
   try {
     const response = await axios.get<CleaningService[]>(
       `${API_BASE_URL}/services`, // backend route for cleaning services
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
+        httpsAgent: process.env.NODE_ENV === "development" ? agent : undefined,
       }
     );
     return response.data;
@@ -41,12 +47,17 @@ export async function getServicePricing(): Promise<ServicePricing[]> {
   }
 }
 export async function getExtras(): Promise<Extra[]> {
+  const agent = new https.Agent({
+    rejectUnauthorized: false,
+  });
+
   try {
     const response = await axios.get<Extra[]>(
       `${API_BASE_URL}/extras`, // backend route for pricing
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
+        httpsAgent: process.env.NODE_ENV === "development" ? agent : undefined,
       }
     );
     return response.data;

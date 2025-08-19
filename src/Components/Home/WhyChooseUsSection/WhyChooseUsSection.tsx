@@ -32,7 +32,7 @@ export default function WhyChooseUsSection() {
       <Container maxWidth="lg">
         <Box className="section-header">
           <Typography variant="h2" className="section-title">
-            Why Choose Cleanify?
+            Why Choose Starling Cleaners?
           </Typography>
           <Typography variant="h6" className="section-subtitle">
             We&rsquo;re committed to delivering exceptional cleaning services

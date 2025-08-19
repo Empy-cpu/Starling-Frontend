@@ -1,30 +1,29 @@
-"use client";
-import React from "react";
-import BookingSteps from "../../Components/Booking/BookingSteps/BookingSteps";
-import BookingForm from "../../Components/Booking/BookingForm/BookingForm";
-import BookingSummaryCard from "../../Components/Booking/BookingSummaryCard/BookingSummaryCard";
+import React from 'react';
+import { getCleaningServices, getExtras } from '@/services/booking-service/booking-service';
+import { extrasOptionsAssets } from '@/constants/BookingConstants';
+import BookingPageClient from './BookingPageClient';
+import './style.css';
 
-import "./style.css";
-import { useBookingStore } from "@/store/useBookingStore";
+const BookingPage = async () => {
+  const services = await getCleaningServices();
+  const extrasData = await getExtras();
 
-const BookingPage: React.FC = () => {
-  const formValues = useBookingStore((state) => state.formValues);
+  const mergedExtras = extrasData.map((extra) => {
+    const asset = extrasOptionsAssets.find((e) => e.id === extra.id);
+    return {
+      ...extra,
+      name: asset?.name || extra.name || extra.description || 'Extra Service',
+      description: asset?.description || extra.description || '',
+      image: asset?.image || extra.image || '/Images/extras/placeholder.jpeg',
+      price: typeof extra.price === 'number' ? extra.price : asset?.price || 0,
+      maxQuantity: asset?.maxQuantity,
+      selectionType: asset?.selectionType,
+      serviceConstraints: asset?.serviceConstraints,
+    };
+  });
 
-  return (
-    <div className="booking-page">
-      <div className="hero-section-steps">
-        <BookingSteps />
-      </div>
-      <div className="booking-layout">
-        <div className="booking-form-wrapper">
-          <BookingForm />
-        </div>
-        <div className="booking-summary-wrapper">
-          <BookingSummaryCard formValues={formValues} />
-        </div>
-      </div>
-    </div>
-  );
+  return <BookingPageClient services={services} extras={mergedExtras} />;
 };
 
 export default BookingPage;
+
