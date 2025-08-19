@@ -29,6 +29,14 @@ const BookingForm: React.FC = () => {
     value: (typeof formValues)[K]
   ) => {
     updateField(field, value);
+    // Clear the error for the specific field being updated
+    if (errors[field]) {
+      setErrors((prevErrors) => {
+        const newErrors = { ...prevErrors };
+        delete newErrors[field];
+        return newErrors;
+      });
+    }
   };
 
   const handleNext = () => {
