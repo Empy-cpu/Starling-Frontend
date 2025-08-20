@@ -21,17 +21,17 @@ export default function ContactSection() {
   const contactInfo = [
     {
       title: "Phone",
-      value: "03 9088 3118",
+      value: "0468 300 130",
       description: "Call us for immediate assistance",
       icon: <Phone />,
-      action: "tel:0390883118",
+      action: "tel:0468 300 130",
     },
     {
       title: "Email",
-      value: "info@cleanify.com.au",
+      value: "peer@starlingcleaners.com.au",
       description: "Send us your questions anytime",
       icon: <Email />,
-      action: "mailto:info@cleanify.com.au",
+      action: "mailto:peer@starlingcleaners.com.au",
     },
     {
       title: "Service Areas",
@@ -54,10 +54,10 @@ export default function ContactSection() {
       <Container maxWidth="lg">
         {/* Header */}
         <Box className="section-header" textAlign="center" mb={6}>
-          <Typography variant="h2" className="section-title">
+          <Typography variant="h2" className="section-title-contact">
             Get In Touch
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-contact">
             Ready to book or have questions? We&#39;re here to help you get the perfect cleaning service
           </Typography>
         </Box>
@@ -106,7 +106,7 @@ export default function ContactSection() {
                   className="quick-action-button urgent-button"
                   href="tel:0390883118"
                 >
-                  Call Now: 03 9088 3118
+                  Call Now: 0468 300 130 
                 </Button>
               </CardContent>
             </Card>
@@ -165,7 +165,7 @@ export default function ContactSection() {
             className="emergency-button"
             href="tel:0390883118"
           >
-            Call Emergency Line: 03 9088 3118
+            Call Emergency Line: 0468 300 130 
           </Button>
         </Box>
       </Container>

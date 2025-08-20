@@ -6,44 +6,23 @@ export default function ReviewsSection() {
   const reviews = [
     {
       name: "Sarah Johnson",
-      rating: 5,
+      rating: 4.5,
       comment:
         "Absolutely fantastic service! My house has never been cleaner. The team was professional, punctual, and thorough.",
       service: "General House Cleaning",
       location: "Melbourne CBD",
-    },
-    {
-      name: "Michael Chen",
-      rating: 4,
-      comment:
-        "Used them for end of lease cleaning and got my full bond back! Highly recommend their attention to detail.",
-      service: "End of Lease Cleaning",
-      location: "South Yarra",
-    },
-    {
-      name: "Emma Wilson",
-      rating: 5,
-      comment: "Great carpet cleaning service. Removed stains I thought were permanent. Very happy with the results!",
-      service: "General House Cleaning",
-      location: "Richmond",
-    },
-    {
-      name: "David Thompson",
-      rating: 4,
-      comment: "Regular weekly cleaning has been a game changer for our busy family. Reliable and consistent quality.",
-      service: "General House Cleaning",
-      location: "Toorak",
-    },
+    }
+   
   ]
 
   return (
     <section id="reviews" className="reviews-section">
       <Container maxWidth="lg">
         <Box className="section-header">
-          <Typography variant="h2" className="section-title">
+          <Typography variant="h2" className="section-title-reviews">
             What Our Customers Say
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-reviews">
             Don&#39;t just take our word for it - hear from our satisfied customers
           </Typography>
         </Box>

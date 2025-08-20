@@ -4,6 +4,10 @@
   background: linear-gradient(135deg, #6e6e6e, #5a5a5a);
   color: white;
   text-align: center;
+  background-image: url("/Images/one.jpg"); /* public/Images/one.jpg */
+  background-size: cover;       /* makes it fill the section */
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat; /* no tiling */
 }
 
 .final-cta-content {
@@ -12,15 +16,15 @@
 }
 
 .final-cta-title {
-  color: #ffffff !important;
+  color: #023059!important;
   font-weight: 700 !important;
   margin-bottom: 16px !important;
 }
 
 .final-cta-subtitle {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #023059!important;
   margin-bottom: 40px !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 
 .final-cta-actions {
@@ -40,8 +44,9 @@
 }
 
 .contact-phone {
-  color: #74BD57 !important;
-  font-weight: 700 !important;
+  color: #0D0D0D !important;
+  font-weight:900 !important;
+  font-style: bold !important;
 }
 
 /* Responsive Design */

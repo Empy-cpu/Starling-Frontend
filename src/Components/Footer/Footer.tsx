@@ -1,7 +1,7 @@
 "use client"
 import { Box, Typography, Container, IconButton, Divider } from "@mui/material"
 import Link from "next/link"
-import { Facebook, Instagram, LinkedIn, Phone, Email, LocationOn } from "@mui/icons-material"
+import { Facebook, Instagram, Phone, Email, LocationOn } from "@mui/icons-material"
 import "./Footer.css"
 
 export default function Footer() {
@@ -18,14 +18,11 @@ export default function Footer() {
                 Melbourne&lsquo;s Premier Cleaning Service
               </Typography>
               <Box className="social-links">
-                <IconButton component="a" href="#" className="social-icon facebook" aria-label="Facebook">
+                <IconButton component="a" href="https://www.facebook.com/profile.php?id=61578451131573" target="_blank" rel="noopener noreferrer" className="social-icon facebook" aria-label="Facebook">
                   <Facebook />
                 </IconButton>
-                <IconButton component="a" href="#" className="social-icon instagram" aria-label="Instagram">
+                <IconButton component="a" href="https://www.instagram.com/starlingcleaners" target="_blank" rel="noopener noreferrer" className="social-icon instagram" aria-label="Instagram">
                   <Instagram />
-                </IconButton>
-                <IconButton component="a" href="#" className="social-icon linkedin" aria-label="LinkedIn">
-                  <LinkedIn />
                 </IconButton>
               </Box>
             </Box>
@@ -36,11 +33,11 @@ export default function Footer() {
               </Typography>
               <Box className="contact-item">
                 <Phone className="contact-icon" />
-                <Typography variant="body2" component="a" href="https://wa.me/61390883118" className="footer-link">03 9088 3118</Typography>
+                <Typography variant="body2" component="a" href="tel:0468300130" className="footer-link">0468 300 130</Typography>
               </Box>
               <Box className="contact-item">
                 <Email className="contact-icon" />
-                <Typography variant="body2" component="a" href="mailto:info@cleanify.com.au" className="footer-link">info@cleanify.com.au</Typography>
+                <Typography variant="body2" component="a" href="mailto:peer@starlingcleaners.com.au" className="footer-link">peer@starlingcleaners.com.au</Typography>
               </Box>
               <Box className="contact-item">
                 <LocationOn className="contact-icon" />

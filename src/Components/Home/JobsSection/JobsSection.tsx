@@ -34,10 +34,10 @@ export default function JobsSection() {
     <section id="careers" className="jobs-section">
       <Container maxWidth="lg">
         <Box className="section-header">
-          <Typography variant="h2" className="section-title">
+          <Typography variant="h2" className="section-title-jobs">
             Join Our Team
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-jobs">
             Love cleaning? We&#39;re always looking for dedicated professionals to join our growing team
           </Typography>
         </Box>

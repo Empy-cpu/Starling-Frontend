@@ -31,7 +31,7 @@ export default function WhyChooseUsSection() {
     <section id="about-us" className="why-choose-section">
       <Container maxWidth="lg">
         <Box className="section-header">
-          <Typography variant="h2" className="section-title">
+          <Typography variant="h2" className="section-title-why">
             Why Choose Starling Cleaners?
           </Typography>
           <Typography variant="h6" className="section-subtitle">

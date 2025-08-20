@@ -2,8 +2,25 @@
 .contact-section {
   padding: 60px 0;
   background-color: #023362;
+  background-image: url("/Images/three.jpg"); /* public/Images/one.jpg */
+  background-size: cover;       /* makes it fill the section */
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat; /* no tiling */
+
 }
 
+
+.section-title-contact{
+  color: #ffffff !important;
+  margin-bottom: 16px !important;
+  padding-bottom: 2%!important;
+}
+
+.section-subtitle-contact{
+  color: #ffffff !important;
+  margin-bottom: 6px !important;
+  padding-bottom: 2%!important;
+}
 .contact-content {
   display: flex;
   flex-direction: column;

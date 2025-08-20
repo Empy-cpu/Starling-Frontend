@@ -17,14 +17,14 @@ export default function ServicesSection() {
       title: "General House Cleaning",
       description: "Regular cleaning to keep your home spotless and fresh",
       icon: <CleaningServices />,
-      price: "From $149",
+      price: "From $135",
       link: "/services-pages/general-cleaning-page",
     },
     {
       title: "End of Lease Cleaning",
       description: "Comprehensive cleaning to get your bond back guaranteed",
       icon: <Security />,
-      price: "From $375",
+      price: "From $335",
       link: "/services-pages/end-of-lease-cleaning-page",
     },
   ];

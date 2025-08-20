@@ -14,6 +14,7 @@ import {
 } from "@mui/material"
 import { CheckCircle, Home, Bed, Bathtub, Kitchen, Phone, Star, Schedule, AttachMoney } from "@mui/icons-material"
 import Image from "next/image"
+import Link from "next/link"
 import "./style.css"
 
 export default function GeneralCleaningPage() {
@@ -76,7 +77,7 @@ export default function GeneralCleaningPage() {
       <section className="service-hero">
         <div className="hero-image-container">
           <Image 
-            src="/Images/seven.jpg" 
+            src="/Images/general-cleaning-cover.jpg" 
             alt="Professional cleaning service" 
             fill
             priority
@@ -105,27 +106,28 @@ export default function GeneralCleaningPage() {
                 />
               ))}
             </Box>
-            <Button 
-              variant="contained" 
-              color="primary" 
-              size="large"
-              startIcon={<Phone />}
-              href="tel:+1234567890"
-              sx={{
-                py: 1.5,
-                px: 4,
-                fontSize: '1.1rem',
-                fontWeight: 600,
-                textTransform: 'none',
-                borderRadius: '50px',
-                boxShadow: '0 4px 14px rgba(82, 179, 217, 0.4)',
-                '&:hover': {
-                  boxShadow: '0 6px 20px rgba(82, 179, 217, 0.6)',
-                },
-              }}
-            >
-              Book Now
-            </Button>
+            <Link href="/booking" passHref>
+              <Button 
+                variant="contained" 
+                color="primary" 
+                size="large"
+                startIcon={<Phone />}
+                sx={{
+                  py: 1.5,
+                  px: 4,
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  textTransform: 'none',
+                  borderRadius: '50px',
+                  boxShadow: '0 4px 14px rgba(82, 179, 217, 0.4)',
+                  '&:hover': {
+                    boxShadow: '0 6px 20px rgba(82, 179, 217, 0.6)',
+                  },
+                }}
+              >
+                Book Now
+              </Button>
+            </Link>
           </Box>
         </Container>
       </section>
@@ -176,7 +178,7 @@ export default function GeneralCleaningPage() {
                       1 Bedroom
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $149
+                      $135
                     </Typography>
                   </Box>
                   <Box className="pricing-item">
@@ -184,7 +186,7 @@ export default function GeneralCleaningPage() {
                       2 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $169
+                      $165
                     </Typography>
                   </Box>
                   <Box className="pricing-item">
@@ -192,7 +194,7 @@ export default function GeneralCleaningPage() {
                       3 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $209
+                      $195
                     </Typography>
                   </Box>
                   <Box className="pricing-item">
@@ -200,7 +202,7 @@ export default function GeneralCleaningPage() {
                       4 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $249
+                      $235
                     </Typography>
                   </Box>
                   <Box className="pricing-item">
@@ -208,7 +210,7 @@ export default function GeneralCleaningPage() {
                       5 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $299
+                      $285
                     </Typography>
                   </Box>
                   <Box className="pricing-item">
@@ -216,7 +218,7 @@ export default function GeneralCleaningPage() {
                       6 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $329
+                      $315
                     </Typography>
                   </Box>
                 </Box>
@@ -368,9 +370,11 @@ export default function GeneralCleaningPage() {
             <Typography variant="h6" className="pricing-cta-text">
               Need a custom quote for your specific needs?
             </Typography>
-            <Button variant="contained" className="cta-button primary">
-              Get Free Quote
-            </Button>
+            <Link href="/booking" passHref>
+              <Button variant="contained" className="cta-button primary">
+                Get Free Quote
+              </Button>
+            </Link>
           </Box>
         </Container>
       </section>
@@ -490,15 +494,17 @@ export default function GeneralCleaningPage() {
               Book your regular house cleaning service today and enjoy more free time
             </Typography>
             <Box className="cta-actions">
-              <Button variant="contained" size="large" className="cta-button primary large">
-                Book General Cleaning Now
-              </Button>
+              <Link href="/booking" passHref>
+                <Button variant="contained" size="large" className="cta-button primary large">
+                  Book General Cleaning Now
+                </Button>
+              </Link>
               <Box className="contact-info">
                 <Typography variant="body1" className="contact-text">
                   Questions? Call us:
                 </Typography>
                 <Typography variant="h5" className="contact-phone">
-                  03 9088 3118
+                  0468 300 130 
                 </Typography>
               </Box>
             </Box>

@@ -30,14 +30,13 @@
 
 /* Logo image as background */
 .logo-image {
-  width: 120px;             /* or adjust based on design */
-  height: 48px;             /* match your navbar height */
-  background-image: url("/Images/NEW_STARLING_LOGO.jpg"); /* path relative to public folder */
-  background-size: contain;
+  width: 120px;  /* container width */
+  height: 48px;  /* matches navbar height */
+  background-image: url("/Images/Starling_Cleaners_Logo.png");
+  background-size: 104% auto;   /* makes image 20% bigger inside box */
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center left;
 }
-
 
 
 .logo-text {

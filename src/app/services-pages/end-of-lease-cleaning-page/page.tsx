@@ -24,6 +24,7 @@ import {
   AttachMoney,
 } from "@mui/icons-material";
 import Image from "next/image";
+import Link from "next/link";
 import "./style.css";
 
 export default function EndOfLeaseCleaningPage() {
@@ -85,7 +86,7 @@ export default function EndOfLeaseCleaningPage() {
       <section className="service-hero">
         <div className="hero-image-container">
           <Image
-            src="/Images/eight.jpg"
+            src="/Images/end_of_lease_cover.jpg"
             alt="Professional end of lease cleaning service"
             fill
             priority
@@ -122,27 +123,28 @@ export default function EndOfLeaseCleaningPage() {
             <Box
               sx={{ display: "flex", gap: 2, justifyContent: "center", mt: 3 }}
             >
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                startIcon={<Phone />}
-                href="tel:+1234567890"
-                sx={{
-                  py: 1.5,
-                  px: 4,
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  textTransform: "none",
-                  borderRadius: "50px",
-                  boxShadow: "0 4px 14px rgba(82, 179, 217, 0.4)",
-                  "&:hover": {
-                    boxShadow: "0 6px 20px rgba(82, 179, 217, 0.6)",
-                  },
-                }}
-              >
-                Book Now - From $420
-              </Button>
+              <Link href="/booking" passHref>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  startIcon={<Phone />}
+                  sx={{
+                    py: 1.5,
+                    px: 4,
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    textTransform: "none",
+                    borderRadius: "50px",
+                    boxShadow: "0 4px 14px rgba(82, 179, 217, 0.4)",
+                    "&:hover": {
+                      boxShadow: "0 6px 20px rgba(82, 179, 217, 0.6)",
+                    },
+                  }}
+                >
+                  Book Now 
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Container>
@@ -199,7 +201,7 @@ export default function EndOfLeaseCleaningPage() {
                       1 Bedroom
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $375
+                      $335
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -215,7 +217,7 @@ export default function EndOfLeaseCleaningPage() {
                       3 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $515
+                      $495
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -231,7 +233,7 @@ export default function EndOfLeaseCleaningPage() {
                       5 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $685
+                      $675
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -351,9 +353,11 @@ export default function EndOfLeaseCleaningPage() {
             <Typography variant="h6" className="pricing-cta-text">
               Ready to secure your bond return?
             </Typography>
-            <Button variant="contained" className="cta-button primary">
-              Book End of Lease Cleaning
-            </Button>
+            <Link href="/booking" passHref>
+              <Button variant="contained" className="cta-button primary">
+                Book End of Lease Cleaning
+              </Button>
+            </Link>
           </Box>
         </Container>
       </section>
@@ -533,19 +537,21 @@ export default function EndOfLeaseCleaningPage() {
               Book your end of lease cleaning today and move out stress-free
             </Typography>
             <Box className="cta-actions">
-              <Button
-                variant="contained"
-                size="large"
-                className="cta-button primary large"
-              >
-                Book End of Lease Cleaning
-              </Button>
+              <Link href="/booking" passHref>
+                <Button
+                  variant="contained"
+                  size="large"
+                  className="cta-button primary large"
+                >
+                  Book End of Lease Cleaning
+                </Button>
+              </Link>
               <Box className="contact-info">
                 <Typography variant="body1" className="contact-text">
                   Need a quote? Call us:
                 </Typography>
                 <Typography variant="h5" className="contact-phone">
-                  03 9088 3118
+                  0468 300 130 
                 </Typography>
               </Box>
             </Box>

@@ -1,5 +1,6 @@
 "use client"
 import { Box, Typography, Button, Container } from "@mui/material"
+import Link from "next/link"
 import "./FinalCTASection.css"
 
 export default function FinalCTASection() {
@@ -14,15 +15,17 @@ export default function FinalCTASection() {
             Join thousands of satisfied customers across Melbourne
           </Typography>
           <Box className="final-cta-actions">
-            <Button variant="contained" size="large" className="cta-button primary large">
-              Get Free Quote Now
-            </Button>
+            <Link href="/booking" passHref>
+              <Button variant="contained" size="large" className="cta-button primary large">
+                Get Your Quote
+              </Button>
+            </Link>
             <Box className="contact-info">
               <Typography variant="body1" className="contact-text">
                 Or call us directly:
               </Typography>
               <Typography variant="h5" className="contact-phone">
-                03 9088 3118
+                0468 300 130 
               </Typography>
             </Box>
           </Box>

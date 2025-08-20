@@ -1,8 +1,24 @@
 /* Jobs Section */
 .jobs-section {
   padding: 60px 0;
-  background: url('/Images/three.jpg') center/cover no-repeat;
-  background-attachment: fixed;
+   background: linear-gradient(to right, #84C366, #e4f68bb9);
+    background-image: url("/Images/five.jpg"); /* public/Images/one.jpg */
+  background-size: cover;       /* makes it fill the section */
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat; /* no tiling */
+}
+
+
+.section-title-jobs{
+  text-align: center;
+  color: #f8f8f8;
+  padding-bottom: 2%!important;
+}
+
+.section-subtitle-jobs{
+  color: #f8f4f4;
+  text-align: center;
+  padding-bottom: 4%!important;
 }
 
 .jobs-content {
