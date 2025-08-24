@@ -76,7 +76,7 @@ const BookingForm: React.FC = () => {
       alert("Please complete all required fields before submitting.");
       return;
     }
-    router.push("/booking-summary");
+    router.push("/confirm-booking");
   };
 
   const renderStep = () => {
