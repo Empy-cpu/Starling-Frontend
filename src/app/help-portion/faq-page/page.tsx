@@ -64,7 +64,7 @@ export default function FAQSection() {
           <Typography variant="h2" className="section-title-faq">
             Frequently Asked Questions
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-faq">
             Find answers to common questions about our cleaning services
           </Typography>
         </Box>

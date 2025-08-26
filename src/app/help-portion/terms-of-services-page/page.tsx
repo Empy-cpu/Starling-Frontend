@@ -10,7 +10,7 @@ export default function TermsSection() {
           <Typography variant="h2" className="section-title-terms">
             Terms and Conditions
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-terms">
             Please read these terms carefully before using our services
           </Typography>
         </Box>
