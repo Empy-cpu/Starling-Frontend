@@ -7,8 +7,8 @@ export default function TermsSection() {
     <section className="terms-section" id="terms">
       <Container maxWidth="lg">
         <Box className="section-header">
-          <Typography variant="h2" className="section-title">
-            Terms and Conditions-
+          <Typography variant="h2" className="section-title-terms">
+            Terms and Conditions
           </Typography>
           <Typography variant="h6" className="section-subtitle">
             Please read these terms carefully before using our services
@@ -35,7 +35,7 @@ export default function TermsSection() {
               </Typography>
               <Typography variant="body1" className="terms-text">
                 • Payment is due upon completion of service unless otherwise arranged
-                <br />• We accept cash, credit card, and bank transfer
+                <br />• We accept credit cards and bank transfer
                 <br />• Cancellations must be made at least 24 hours in advance
                 <br />• Same-day cancellations may incur a 50% charge
               </Typography>
@@ -113,10 +113,10 @@ export default function TermsSection() {
 
             <Box className="terms-footer">
               <Typography variant="body2" className="terms-footer-text">
-                <strong>Last updated:</strong> January 2024
+                <strong>Last updated:</strong> August 2025
                 <br />
-                <strong>Contact:</strong> For questions about these terms, contact us at info@cleanify.com.au or 03 9088
-                3118
+                <strong>Contact:</strong> For questions about these terms, contact us at <strong><a href="mailto:peer@starlingcleaners.com.au">peer@starlingcleaners.com.au</a></strong> or <strong><a href="tel:0468300130">0468 300 130</a></strong>
+                
               </Typography>
             </Box>
           </CardContent>

@@ -2,7 +2,8 @@
 .hero-section-home {
   padding: 120px 0 180px 0;
   text-align: center;
-  background: url('/Images/four.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(239, 239, 239, 0.053), rgba(244, 242, 242, 0.5)), 
+              url('/Images/four.jpg') center/cover no-repeat;
  
 }
 
@@ -21,10 +22,11 @@
 
 
 .hero-subtitle-home {
-  color: #fafafa !important;
+  color: #130f41 !important;
   margin-bottom: 32px !important;
-  font-weight: 400 !important;
+  font-weight: 700 !important;
   line-height: 1.4 !important;
+  font-style: bold !important;
 }
 
 .hero-features {
@@ -40,10 +42,16 @@
   color: #023362 !important;
   font-weight: 600 !important;
   border: 1px solid #023362 !important;
+  padding: 8px 16px !important;
+  height: auto !important;
+  font-size: 1rem !important;
+  border-radius: 24px !important;
 }
 
 .hero-chip-home .MuiChip-icon {
-  color:  #023362!important;
+  color: #023362 !important;
+  font-size: 1.2rem !important;
+  margin-left: 4px !important;
 }
 
 .hero-actions-home {

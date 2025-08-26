@@ -1,18 +1,41 @@
 /* How It Works Section */
 .how-it-works-section {
-  padding: 60px 0;
-  background: #f2f6e8;
+  padding: 80px 0;
+  position: relative;
+  background: linear-gradient(135deg, rgba(97, 145, 190, 0.888), rgba(103, 167, 201, 0.879)), 
+              url('/Images/eight.jpg') center/cover no-repeat;
+
+  background-attachment: fixed;
+}
+
+.how-it-works-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.how-it-works-section > .MuiContainer-root {
+  position: relative;
+  z-index: 2;
 }
 
 .section-title-how{
   text-align: center;
   padding-bottom: 2%!important;
-  color:#081F54;
+  color:#ffffff !important;
+  position: relative;
+  z-index: 2;
 }
 .section-subtitle-how{
   text-align: center;
-  color:#081F54;
+  color:#ffffff !important;
   padding-bottom: 4%;
+  position: relative;
+  z-index: 2;
 }
 
 .steps-container {
@@ -35,7 +58,7 @@
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #74BD57, #9cf479);
-  color: #081F54;
+  color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -44,6 +67,8 @@
   font-weight: 700;
   margin: 0 auto 20px auto;
   box-shadow: 0 4px 12px rgba(186, 255, 57, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .step-icon {
@@ -56,14 +81,18 @@
 }
 
 .step-title {
-  color: #081F54 !important;
+  color: #ffffff !important;
   font-weight: 600 !important;
   margin-bottom: 16px !important;
+  position: relative;
+  z-index: 2;
 }
 
 .step-description {
-  color: #081F54 !important;
+  color: #ffffff !important;
   line-height: 1.6;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-container {

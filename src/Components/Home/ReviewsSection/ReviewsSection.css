@@ -1,20 +1,21 @@
 /* Reviews Section */
 .reviews-section {
   padding: 60px 0;
-  background-image: url("/Images/six.jpg"); /* public/Images/one.jpg */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.425), rgba(244, 244, 244, 0.676)), 
+              url('/Images/six.jpg') center/cover no-repeat; 
   background-size: cover;       /* makes it fill the section */
   background-position: center;  /* keeps it centered */
   background-repeat: no-repeat; /* no tiling */
 }
 .section-title-reviews {
-  color: #84C366 !important;
+  color: #1c3460 !important;
   text-align: center;
   font-weight: 300;
   padding-bottom: 2% !important;
 }
 
 .section-subtitle-reviews{
-  color:#b1e19b !important;
+  color:#1c3460 !important;
   text-align: center;
   padding-bottom: 4% !important;
   font-weight: 300;

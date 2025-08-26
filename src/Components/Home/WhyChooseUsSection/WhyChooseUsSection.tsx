@@ -34,7 +34,7 @@ export default function WhyChooseUsSection() {
           <Typography variant="h2" className="section-title-why">
             Why Choose Starling Cleaners?
           </Typography>
-          <Typography variant="h6" className="section-subtitle">
+          <Typography variant="h6" className="section-subtitle-why">
             We&rsquo;re committed to delivering exceptional cleaning services
           </Typography>
         </Box>

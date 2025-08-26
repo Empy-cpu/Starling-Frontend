@@ -1,8 +1,8 @@
 /* Jobs Section */
 .jobs-section {
   padding: 60px 0;
-   background: linear-gradient(to right, #84C366, #e4f68bb9);
-    background-image: url("/Images/five.jpg"); /* public/Images/one.jpg */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.425), rgba(244, 244, 244, 0.676)), 
+              url('/Images/five.jpg') center/cover no-repeat; /* public/Images/one.jpg */
   background-size: cover;       /* makes it fill the section */
   background-position: center;  /* keeps it centered */
   background-repeat: no-repeat; /* no tiling */
@@ -11,12 +11,12 @@
 
 .section-title-jobs{
   text-align: center;
-  color: #f8f8f8;
+  color: #2d447f;
   padding-bottom: 2%!important;
 }
 
 .section-subtitle-jobs{
-  color: #f8f4f4;
+  color: #2d447f;;
   text-align: center;
   padding-bottom: 4%!important;
 }

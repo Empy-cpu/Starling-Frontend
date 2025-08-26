@@ -8,12 +8,12 @@ export default function FAQSection() {
     {
       question: "What cleaning services do you offer?",
       answer:
-        "We offer general house cleaning, end of lease cleaning, steam carpet cleaning, deep cleaning, and commercial cleaning services. All our services are customizable to meet your specific needs.",
+        "We offer general house cleaning and end of lease cleaning. All our services are customizable to meet your specific needs.",
     },
     {
       question: "How much do your cleaning services cost?",
       answer:
-        "Our pricing varies based on the size of your property, type of service, and frequency. General house cleaning starts from $80, end of lease cleaning from $200, and carpet cleaning from $60. Contact us for a free, personalized quote.",
+        "Our pricing varies based on the size of your property, type of service, and frequency. General house cleaning starts from $135 and end of lease cleaning from $335. Contact us for a free, personalized quote.",
     },
     {
       question: "Are you insured and bonded?",
@@ -61,7 +61,7 @@ export default function FAQSection() {
     <section className="faq-section" id="faq">
       <Container maxWidth="lg">
         <Box className="section-header">
-          <Typography variant="h2" className="section-title">
+          <Typography variant="h2" className="section-title-faq">
             Frequently Asked Questions
           </Typography>
           <Typography variant="h6" className="section-subtitle">
@@ -95,10 +95,10 @@ export default function FAQSection() {
           </Typography>
           <Box className="faq-cta-buttons">
             <Typography variant="body2" className="contact-option">
-              📞 Call us: <strong>03 9088 3118</strong>
+              📞 Call us: <strong><a href="tel:0468300130">0468 300 130</a></strong>
             </Typography>
             <Typography variant="body2" className="contact-option">
-              ✉️ Email: <strong>info@cleanify.com.au</strong>
+              ✉️ Email: <strong><a href="mailto:peer@starlingcleaners.com.au">peer@starlingcleaners.com.au</a></strong>
             </Typography>
           </Box>
         </Box>

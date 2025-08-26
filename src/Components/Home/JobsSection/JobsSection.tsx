@@ -31,7 +31,7 @@ export default function JobsSection() {
 
 
   return (
-    <section id="careers" className="jobs-section">
+    <section id="jobs" className="jobs-section">
       <Container maxWidth="lg">
         <Box className="section-header">
           <Typography variant="h2" className="section-title-jobs">

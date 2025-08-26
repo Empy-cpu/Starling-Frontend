@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 40px 16px;
-  background-image: url('/Images/two.jpg')
+  background-image: url('/Images/two.jpg');
 }
 
 /* Steps container for horizontal layout */
@@ -60,7 +60,6 @@
   font-weight: bold;
   color: #333;
 }
-/* Existing styles omitted for brevity — keep all previous ones */
 
 .steps-wrapper {
   display: flex;
@@ -68,6 +67,7 @@
   align-items: center;
   text-align: center;
   max-width: 1000px;
+  padding: 0 1rem; /* Add padding for smaller screens */
 }
 
 /* Heading above the steps */
@@ -83,4 +83,30 @@
   font-size: 1.5rem;
   color: #20440d;
   margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section-steps {
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .steps-heading {
+    font-size: 2rem;
+  }
+
+  .steps-subtext {
+    font-size: 1.2rem;
+  }
+
+  .steps-container {
+    gap: 16px;
+  }
+
+  .step-card {
+    width: 100%;
+    max-width: 280px; /* Adjust max-width for mobile */
+    padding: 16px;
+  }
 }

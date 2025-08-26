@@ -4,6 +4,20 @@
   overflow-x: hidden;
 }
 
+.section-title-general {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #023059 !important;
+  margin-bottom: 16px !important;
+  text-align: center;
+}
+
+.section-subtitle-general {
+  color: #023859 !important;
+  font-weight: 400 !important; 
+  margin: 0 auto;
+  text-align: center !important;
+}
 /* Hero Section */
 .service-hero {
   position: relative;
@@ -163,7 +177,7 @@
 
 .feature-icon svg {
   font-size: 2rem;
-  color: #baff39;
+  color: #25a044;
 }
 
 .feature-title {
@@ -178,9 +192,19 @@
 }
 
 /* Pricing Section */
-.pricing-section {
+.pricing-section-general {
   padding: 80px 0;
-  background-color: #ffffff;
+  position: relative;
+  /* 
+    USER: Replace 'pricing-background.jpg' with your image file name.
+    Place the image in the public/Images/ directory.
+  */
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.806), rgba(255, 255, 255, 0.6)),
+    url('/Images/six.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: Creates a parallax effect */
 }
 
 .pricing-content {
@@ -391,9 +415,28 @@
 /* Service CTA Section */
 .service-cta {
   padding: 100px 0;
-  background: linear-gradient(135deg, #6e6e6e, #5a5a5a);
-  color: white;
   text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.546), rgba(244, 244, 244, 0.075)), 
+              url('/Images/gemini_2.jpg') center/cover no-repeat;
+  color: white;
+  background-attachment: fixed;
+}
+
+.service-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
 }
 
 .cta-content {

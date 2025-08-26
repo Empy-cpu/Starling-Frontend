@@ -24,6 +24,12 @@
   }
 }
 
+@media (max-width: 400px) {
+  .extras-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
 .extra-card {
   text-align: center;
   background: #fff;
@@ -82,4 +88,11 @@
 .extra-price {
   font-size: 13px;
   color: #888;
+}
+
+.booking-form-label {
+  color: #0a0000; /* or use a theme color like #000, #444, etc. */
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
 }

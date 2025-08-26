@@ -18,9 +18,8 @@
 
 .booking-form-wrapper {
   flex: 0 0 700px; /* Fixed width */
-  margin-left:270px;
-  margin-top:0px;
- 
+  margin-left: 270px;
+  margin-top: 0px;
 }
 
 .booking-summary-wrapper {
@@ -30,4 +29,43 @@
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.183);
   border-radius: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .booking-form-wrapper {
+    margin-left: 0; /* Adjust margin for smaller PC screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .booking-layout {
+    flex-direction: column;
+    align-items: center; /* Center items on smaller screens */
+    padding: 1rem;
+  }
+
+  .booking-form-wrapper {
+    flex: 1 1 auto; /* Allow form to grow and shrink */
+    width: 100%;
+    max-width: 700px; /* Optional: constrain max-width */
+    margin-left: 0;
+  }
+
+  .booking-summary-wrapper {
+    position: static; /* Remove sticky position on smaller screens */
+    width: 100%;
+    max-width: 700px; /* Match form width */
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section-steps {
+    padding: 1rem 0;
+  }
+
+  .booking-layout {
+    padding: 0.5rem;
+  }
 }

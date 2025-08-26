@@ -35,3 +35,15 @@
   border-color: #2bbf24;
   background-color: #58e076;
 }
+
+@media (max-width: 600px) {
+  .frequency-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .frequency-card {
+    width: 100%;
+    min-width: 0;
+  }
+}

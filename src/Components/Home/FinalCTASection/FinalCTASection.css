@@ -1,10 +1,11 @@
 /* Final CTA Section */
 .final-cta-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #6e6e6e, #5a5a5a);
-  color: white;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.119), rgba(244, 244, 244, 0.183)), 
+              url('/Images/one.jpg') center/cover no-repeat; 
+  
   text-align: center;
-  background-image: url("/Images/one.jpg"); /* public/Images/one.jpg */
+ 
   background-size: cover;       /* makes it fill the section */
   background-position: center;  /* keeps it centered */
   background-repeat: no-repeat; /* no tiling */
@@ -38,13 +39,15 @@
   text-align: center;
 }
 
-.contact-text {
-  color: rgba(255, 255, 255, 0.8) !important;
+.contact-text-home {
+  color: rgba(29, 38, 69, 0.8) !important;
   margin-bottom: 8px !important;
+  font-size: 20px !important;
+  font-style: italic !important;
 }
 
-.contact-phone {
-  color: #0D0D0D !important;
+.contact-phone-home {
+  color: #362f93 !important;
   font-weight:900 !important;
   font-style: bold !important;
 }

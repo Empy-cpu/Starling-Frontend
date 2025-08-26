@@ -154,13 +154,13 @@ export default function GeneralCleaningPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="pricing-section">
+      <section className="pricing-section-general">
         <Container maxWidth="lg">
           <Box className="section-header">
-            <Typography variant="h2" className="section-title">
+            <Typography variant="h2" className="section-title-general">
               Pricing Guide
             </Typography>
-            <Typography variant="h6" className="section-subtitle">
+            <Typography variant="h6" className="section-subtitle-general">
               Transparent pricing with no hidden fees - choose what works for your home
             </Typography>
           </Box>
@@ -383,10 +383,10 @@ export default function GeneralCleaningPage() {
       <section className="checklist-section">
         <Container maxWidth="lg">
           <Box className="section-header">
-            <Typography variant="h2" className="section-title">
+            <Typography variant="h2" className="section-title-general">
               What&#39;s Included in Your Clean
             </Typography>
-            <Typography variant="h6" className="section-subtitle">
+            <Typography variant="h6" className="section-subtitle-general">
               Our comprehensive cleaning checklist ensures every area of your home gets the attention it deserves
             </Typography>
           </Box>
@@ -504,7 +504,9 @@ export default function GeneralCleaningPage() {
                   Questions? Call us:
                 </Typography>
                 <Typography variant="h5" className="contact-phone">
-                  0468 300 130 
+                  <a href="tel:0468300130" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    0468 300 130
+                  </a>
                 </Typography>
               </Box>
             </Box>

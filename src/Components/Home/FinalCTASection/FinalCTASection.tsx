@@ -21,10 +21,10 @@ export default function FinalCTASection() {
               </Button>
             </Link>
             <Box className="contact-info">
-              <Typography variant="body1" className="contact-text">
+              <Typography variant="body1" className="contact-text-home">
                 Or call us directly:
               </Typography>
-              <Typography variant="h5" className="contact-phone">
+              <Typography variant="h5" className="contact-phone-home">
                 0468 300 130 
               </Typography>
             </Box>

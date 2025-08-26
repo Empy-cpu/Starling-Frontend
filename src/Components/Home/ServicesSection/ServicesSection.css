@@ -1,8 +1,25 @@
 /* Services Section */
 .services-section {
-  padding: 60px 0;
- background: linear-gradient(to right, #0e4374, #0d2764);
+  padding: 80px 0;
+  position: relative;
+  background: linear-gradient(135deg, rgba(121, 155, 173, 0.696), rgba(116, 152, 160, 0.473)), 
+              url('/Images/gemini-asian.jpg') center/cover no-repeat;
 
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  z-index: 1;
+}
+
+.services-section > .MuiContainer-root {
+  position: relative;
+  z-index: 2;
 }
 
 .services-grid {
@@ -10,8 +27,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
-.section-title-home-services{
 
+.section-title-home-services{
   margin-bottom: 16px;
   padding-bottom: 2%!important;
   color: #ffffff !important; 
@@ -19,13 +36,12 @@
 }
 
 .section-subtitle-services {
-  
-  color: #ffffff !important;
-  padding-bottom: 4%;
   text-align: center;
-  
-}
+  color:#081F54 !important;
+  font-style: bold !important;
+ 
 
+}
 
 .service-card {
   background-color: #fffdf9 !important;

@@ -175,10 +175,10 @@ export default function EndOfLeaseCleaningPage() {
       <section className="pricing-section">
         <Container maxWidth="lg">
           <Box className="section-header">
-            <Typography variant="h2" className="section-title">
+            <Typography variant="h2" className="section-title-end">
               End of Lease Cleaning Pricing
             </Typography>
-            <Typography variant="h6" className="section-subtitle">
+            <Typography variant="h6" className="section-subtitle-end">
               Comprehensive cleaning packages designed to get your bond back
             </Typography>
           </Box>
@@ -366,10 +366,10 @@ export default function EndOfLeaseCleaningPage() {
       <section className="checklist-section">
         <Container maxWidth="lg">
           <Box className="section-header">
-            <Typography variant="h2" className="section-title">
+            <Typography variant="h2" className="section-title-end">
               Complete End of Lease Cleaning Checklist
             </Typography>
-            <Typography variant="h6" className="section-subtitle">
+            <Typography variant="h6" className="section-subtitle-end">
               Our thorough cleaning process covers every area to ensure you get
               your bond back
             </Typography>
@@ -496,7 +496,7 @@ export default function EndOfLeaseCleaningPage() {
                 <Typography variant="h4" className="guarantee-title">
                   100% Bond Back Guarantee
                 </Typography>
-                <Typography variant="body1" className="guarantee-description">
+                <Typography variant="body1" className="guarantee-description-li">
                   We&rsquo;re so confident in our end of lease cleaning service
                   that we guarantee you&rsquo;ll get your full bond back. If
                   your property manager or landlord isn&rsquo;t satisfied with
@@ -551,7 +551,9 @@ export default function EndOfLeaseCleaningPage() {
                   Need a quote? Call us:
                 </Typography>
                 <Typography variant="h5" className="contact-phone">
-                  0468 300 130 
+                  <a href="tel:0468300130" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    0468 300 130
+                  </a>
                 </Typography>
               </Box>
             </Box>

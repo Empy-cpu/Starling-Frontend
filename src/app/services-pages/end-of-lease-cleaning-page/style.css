@@ -15,6 +15,20 @@
   overflow: hidden;
 }
 
+.section-title-end{
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #023059 !important;
+  margin-bottom: 16px !important;
+  text-align: center;
+}
+
+.section-subtitle-end{
+  color: #023859 !important;
+  font-weight: 400 !important;  
+  margin: 0 auto;
+  text-align: center;
+}
 .hero-content {
   position: relative;
   z-index: 2;
@@ -176,7 +190,13 @@
 /* Pricing Section */
 .pricing-section {
   padding: 80px 0;
-  background-color: #ffffff;
+  position: relative;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.797), rgba(255, 255, 255, 0.596)),
+    url('/Images/seven.jpg'); /* User can replace this with their image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
 }
 
 .pricing-content {
@@ -340,10 +360,13 @@
 }
 
 .guarantee-pricing-text {
+  color: #023859 !important; 
+  text-align: center;
+}
+.guarantee-description-li {
   color: #023859 !important;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4% !important;
 }
 
 .pricing-cta {
@@ -505,9 +528,28 @@
 /* Service CTA Section */
 .service-cta {
   padding: 100px 0;
-  background: linear-gradient(135deg, #6e6e6e, #5a5a5a);
-  color: white;
   text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.546), rgba(244, 244, 244, 0.075)), 
+              url('/Images/gemini_2.jpg') center/cover no-repeat;
+  color: white;
+  background-attachment: fixed;
+}
+
+.service-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
 }
 
 .cta-content {
