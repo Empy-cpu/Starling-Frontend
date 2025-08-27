@@ -531,7 +531,7 @@
   text-align: center;
   position: relative;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.546), rgba(244, 244, 244, 0.075)), 
-              url('/Images/gemini_2.jpg') center/cover no-repeat;
+              url('/Images/Gemini_2.jpg') center/cover no-repeat;
   color: white;
   background-attachment: fixed;
 }
