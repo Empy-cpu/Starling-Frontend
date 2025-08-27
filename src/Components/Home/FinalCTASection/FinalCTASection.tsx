@@ -25,7 +25,7 @@ export default function FinalCTASection() {
                 Or call us directly:
               </Typography>
               <Typography variant="h5" className="contact-phone-home">
-                0468 300 130 
+                0468 300 130
               </Typography>
             </Box>
           </Box>

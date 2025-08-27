@@ -17,7 +17,14 @@ const BookingSummaryCard: React.FC<BookingSummaryCardProps> = React.memo(
     const pricing = useBookingStore((state) => state.getPricing());
     
     // Get extras breakdown from pricing
-    const { extrasBreakdown = [], baseSubtotal = 0, discount = 0, total = 0 } = pricing || {};
+    const { 
+      extrasBreakdown = [], 
+      baseSubtotal = 0, 
+      discount = 0, 
+      frequencyDiscount = 0,
+      firstMonthDiscount = 0,
+      total = 0 
+    } = pricing || {};
     
     // Calculate values for display
     const extrasTotal = React.useMemo(() => 
@@ -102,11 +109,30 @@ const BookingSummaryCard: React.FC<BookingSummaryCardProps> = React.memo(
             <Typography>${beforeDiscount.toFixed(2)}</Typography>
           </Box>
 
-          {discount && discount > 0 && (
-            <Box className="summary-row">
-              <Typography>DISCOUNT ({formValues.frequency})</Typography>
-              <Typography color="green">-${discount.toFixed(2)}</Typography>
-            </Box>
+          {(frequencyDiscount > 0 || firstMonthDiscount > 0) && (
+            <>
+              {frequencyDiscount > 0 && (
+                <Box className="summary-row">
+                  <Typography>DISCOUNT ({formValues.frequency})</Typography>
+                  <Typography color="green">-${frequencyDiscount.toFixed(2)}</Typography>
+                </Box>
+              )}
+              {firstMonthDiscount > 0 && (
+                <Box className="summary-row">
+                  <Box>
+                    <Typography>FIRST MONTH DISCOUNT (15%)</Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      *15% discount for your first month only
+                    </Typography>
+                  </Box>
+                  <Typography color="green">-${firstMonthDiscount.toFixed(2)}</Typography>
+                </Box>
+              )}
+              <Box className="summary-row" sx={{ mt: 1, pt: 1, borderTop: '1px dashed #e0e0e0' }}>
+                <Typography fontWeight="bold">TOTAL DISCOUNT</Typography>
+                <Typography fontWeight="bold" color="green">-${discount.toFixed(2)}</Typography>
+              </Box>
+            </>
           )}
 
           <Divider sx={{ my: 2 }} />

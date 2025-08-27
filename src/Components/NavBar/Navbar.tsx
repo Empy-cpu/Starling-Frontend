@@ -165,7 +165,7 @@ export default function Navbar() {
           <Box className="mobile-phone">
             <Phone className="phone-icon" />
             <Typography variant="body2" className="phone-text">
-              0468 300 130 
+              0468 300 130
             </Typography>
           </Box>
         </ListItem>
@@ -370,12 +370,12 @@ export default function Navbar() {
                       <Phone className="phone-icon" />
                       <Typography variant="body2" className="phone-number">
                         <a
-                          href="https://wa.me/61390883118"
+                          href="https://wa.me/61468300130?text=Hi%2C%20I'd%20like%20to%20make%20a%20booking%21"
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{ textDecoration: "none", color: "inherit" }}
                         >
-                          0468 300 130 
+                          0468 300 130
                         </a>
                       </Typography>
                     </Box>

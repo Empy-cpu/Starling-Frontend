@@ -551,7 +551,7 @@ export default function EndOfLeaseCleaningPage() {
                   Need a quote? Call us:
                 </Typography>
                 <Typography variant="h5" className="contact-phone">
-                  <a href="tel:0468300130" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  <a href="tel:+61468300130" style={{ color: 'inherit', textDecoration: 'none' }}>
                     0468 300 130
                   </a>
                 </Typography>

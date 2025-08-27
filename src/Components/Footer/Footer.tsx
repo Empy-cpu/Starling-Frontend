@@ -33,7 +33,7 @@ export default function Footer() {
               </Typography>
               <Box className="contact-item">
                 <Phone className="contact-icon" />
-                <Typography variant="body2" component="a" href="tel:0468300130" className="footer-link">0468 300 130</Typography>
+                <Typography variant="body2" component="a" href="tel:+61468300130" className="footer-link">0468 300 130</Typography>
               </Box>
               <Box className="contact-item">
                 <Email className="contact-icon" />

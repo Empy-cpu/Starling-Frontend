@@ -24,7 +24,7 @@ export default function ContactSection() {
       value: "0468 300 130",
       description: "Call us for immediate assistance",
       icon: <Phone />,
-      action: "tel:0468 300 130",
+      action: "tel:+61468300130",
     },
     {
       title: "Email",
@@ -104,7 +104,7 @@ export default function ContactSection() {
                 <Button
                   variant="contained"
                   className="quick-action-button urgent-button"
-                  href="tel:0390883118"
+                  href="tel:610468300130"
                 >
                   Call Now: 0468 300 130 
                 </Button>
@@ -163,7 +163,7 @@ export default function ContactSection() {
             variant="contained"
             size="large"
             className="emergency-button"
-            href="tel:0390883118"
+            href="tel:610468300130"
           >
             Call Emergency Line: 0468 300 130 
           </Button>

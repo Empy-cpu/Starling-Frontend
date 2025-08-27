@@ -200,12 +200,14 @@ const ConfirmBookingPage: React.FC = () => {
             </Typography>
             <Typography variant="body2">
               <strong>Frequency:</strong> {bookingDetails.frequency}
-              {pricing.discount > 0 && (
+              {pricing.frequencyDiscount > 0 && (
                 <>
                   {" "}
                   —{" "}
                   <span style={{ color: "green" }}>
-                    Discount: {formatCurrency(pricing.discount)}
+                    {pricing.frequencyDiscount > 0 && `${Math.round(pricing.frequencyDiscount / pricing.rawSubtotal * 100)}% off`}
+                    {pricing.frequencyDiscount > 0 && ' • '}
+                    {formatCurrency(pricing.frequencyDiscount)} discount
                   </span>
                 </>
               )}
@@ -275,9 +277,21 @@ const ConfirmBookingPage: React.FC = () => {
             <Typography variant="body2">
               Subtotal: {formatCurrency(pricing.rawSubtotal)}
             </Typography>
-            <Typography variant="body2">
-              GST (10%): {formatCurrency(pricing.gst)}
-            </Typography>
+            
+            {/* Show frequency discount if applicable */}
+            {pricing.frequencyDiscount > 0 && (
+              <Typography variant="body2" color="green">
+                {bookingDetails.frequency} Discount: -{formatCurrency(pricing.frequencyDiscount)}
+              </Typography>
+            )}
+            
+            {/* Show first month discount */}
+            {pricing.firstMonthDiscount > 0 && (
+              <Typography variant="body2" color="green">
+                First Month Discount (15%): -{formatCurrency(pricing.firstMonthDiscount)}
+              </Typography>
+            )}
+            
             <Divider sx={{ my: 1 }} />
             <Typography variant="subtitle1" fontWeight={600}>
               Total: {formatCurrency(pricing.total)}

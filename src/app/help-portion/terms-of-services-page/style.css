@@ -43,7 +43,17 @@
   color: #023859 !important;
   line-height: 1.8;
   font-size: 1rem !important;
-  text-align: center !important;
+  text-align: left !important;
+  padding-left: 20px;
+}
+
+.terms-text br + br {
+  display: none;
+}
+
+.terms-text br + br + * {
+  margin-top: 10px;
+  display: block;
 }
 
 .terms-divider {

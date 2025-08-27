@@ -95,7 +95,7 @@ export default function FAQSection() {
           </Typography>
           <Box className="faq-cta-buttons">
             <Typography variant="body2" className="contact-option">
-              📞 Call us: <strong><a href="tel:0468300130">0468 300 130</a></strong>
+              📞 Call us: <strong><a href="tel:+61468300130">0468 300 130</a></strong>
             </Typography>
             <Typography variant="body2" className="contact-option">
               ✉️ Email: <strong><a href="mailto:peer@starlingcleaners.com.au">peer@starlingcleaners.com.au</a></strong>

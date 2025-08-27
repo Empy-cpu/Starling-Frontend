@@ -48,7 +48,7 @@ export default function HeroSection() {
             </Button>
             <Button
               component="a"
-              href="https://wa.me/61390883118?text=Hi%2C%20I%E2%80%99d%20like%20to%20make%20a%20booking%21"
+              href="https://wa.me/61468300130?text=Hi%2C%20I%E2%80%99d%20like%20to%20make%20a%20booking%21"
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"
@@ -56,7 +56,7 @@ export default function HeroSection() {
               className="stl-button secondary"
               startIcon={<PhoneIcon />}
             >
-              03 9088 3118
+              0468 300 130
             </Button>
           </Box>
         </Box>

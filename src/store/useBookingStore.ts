@@ -17,10 +17,12 @@ export type BookingPricing = {
   baseSubtotal: number;      // Base price of the selected service
   extrasTotal: number;       // Total of all selected extras
   rawSubtotal: number;       // Subtotal before any discounts
-  discount: number;          // Discount amount
-  subtotalAfterDiscount: number; // Subtotal after applying discount
+  discount: number;          // Total discount amount
+  frequencyDiscount: number; // Discount from frequency selection
+  firstMonthDiscount: number; // 15% first month discount
+  subtotalAfterDiscount: number; // Subtotal after applying all discounts
   total: number;             // Final total
-  gst: number;              // GST amount
+  gst: number;              // GST amount (now set to 0)
   extrasBreakdown: ExtraBreakdown[]; // Breakdown of selected extras
 };
 
@@ -305,31 +307,46 @@ export const useBookingStore = create<BookingStore>()((set, get) => ({
         }),
         
       // Selector to get current pricing
-      getPricing: (): BookingPricing => {
+      getPricing: (): BookingPricing | undefined => {
         const state = get();
-        if (!state.pricing) {
-          // Calculate pricing if not already in state
+        if (state.pricing) {
+          return state.pricing;
+        }
+        
+        // If no pricing exists yet, calculate it
+        if (state.formValues.service && state.formValues.size) {
           const pricing = calculateBookingPricing(
             state.formValues,
             state.services,
             state.extrasOptions
           );
-          // Update the store with the calculated pricing
-          set({ pricing });
-          return pricing;
+          
+          // Create complete pricing object with all required properties
+          const completePricing: BookingPricing = {
+            ...pricing,
+            frequencyDiscount: pricing.frequencyDiscount || 0,
+            firstMonthDiscount: pricing.firstMonthDiscount || 0,
+          };
+          
+          // Update the store with the complete pricing
+          set({ pricing: completePricing });
+          return completePricing;
         }
         return state.pricing;
       },
       
       // Recalculate pricing based on provided form values
       recalculatePricing: (formValues) => {
-        const pricing = calculateBookingPricing(
-          formValues,
-          get().services,
-          get().extrasOptions
-        );
-        set({ pricing });
-        return pricing;
+        const { services, extrasOptions } = get();
+        const pricing = calculateBookingPricing(formValues, services, extrasOptions);
+        // Ensure all required properties are set
+        const completePricing: BookingPricing = {
+          ...pricing,
+          frequencyDiscount: pricing.frequencyDiscount || 0,
+          firstMonthDiscount: pricing.firstMonthDiscount || 0,
+        };
+        set({ pricing: completePricing });
+        return completePricing;
       },
       
       // Validates the current form values

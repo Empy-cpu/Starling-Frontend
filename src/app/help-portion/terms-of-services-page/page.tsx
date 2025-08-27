@@ -115,7 +115,7 @@ export default function TermsSection() {
               <Typography variant="body2" className="terms-footer-text">
                 <strong>Last updated:</strong> August 2025
                 <br />
-                <strong>Contact:</strong> For questions about these terms, contact us at <strong><a href="mailto:peer@starlingcleaners.com.au">peer@starlingcleaners.com.au</a></strong> or <strong><a href="tel:0468300130">0468 300 130</a></strong>
+                <strong>Contact:</strong> For questions about these terms, contact us at <strong><a href="mailto:peer@starlingcleaners.com.au">peer@starlingcleaners.com.au</a></strong> or <strong><a href="tel:+61468300130">0468 300 130</a></strong>
                 
               </Typography>
             </Box>
