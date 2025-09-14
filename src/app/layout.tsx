@@ -14,14 +14,19 @@ export const metadata: Metadata = {
   },
 };
 
+// Add this at the top of your file with other imports
+import { Suspense } from 'react';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <GoogleAnalytics />
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeRegistry>
           <LayoutWrapper>{children}</LayoutWrapper>
         </ThemeRegistry>
