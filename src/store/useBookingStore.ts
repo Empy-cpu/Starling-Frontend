@@ -368,7 +368,6 @@ export const useBookingStore = create<BookingStore>()((set, get) => ({
             
             // List of extra IDs to include for End of Lease
             const includedInEol = [
-              '56409fda-d9d6-4256-9f06-430a010c0733', // Inside Oven
               '72368950-2455-4e9f-a876-95566f1ab258', // Inside Windows (1-3 bedroom)
               'c5972f4e-6def-4f19-8d15-a1b9a85db67c', // Inside Windows (3+ bedroom)
               'abe8d936-842f-4149-9f5f-34eed0abdcfd', // Wall Cleaning

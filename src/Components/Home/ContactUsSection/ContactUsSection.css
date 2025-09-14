@@ -148,7 +148,7 @@
 }
 
 .submit-button:hover {
-  background: linear-gradient(135deg, #9fe01b, #baff39) !important;
+  background: rgba(186, 255, 57, 0.6) !important;
   box-shadow: 0 6px 20px rgba(186, 255, 57, 0.6) !important;
   transform: translateY(-2px);
 }
@@ -211,8 +211,8 @@
 }
 
 .quick-action-button:not(.urgent-button) {
-  color: #baff39 !important;
-  border-color: #baff39 !important;
+  color: #8BBF65 !important;
+  border-color: #8BBF65 !important;
 }
 
 .quick-action-button:not(.urgent-button):hover {
