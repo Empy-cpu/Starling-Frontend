@@ -28,7 +28,7 @@ export default function ContactSection() {
     },
     {
       title: "Email",
-      value: "peer@starlingcleaners.com.au",
+      value: "peer@starlingcleaners.com",
       description: "Send us your questions anytime",
       icon: <Email />,
       action: "mailto:peer@starlingcleaners.com.au",

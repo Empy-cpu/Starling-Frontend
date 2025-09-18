@@ -5,7 +5,6 @@ import WhyChooseUsSection from "@/Components/Home/WhyChooseUsSection/WhyChooseUs
 import ContactUsSection from "@/Components/Home/ContactUsSection/ContactUsSection";
 import JobsSection from "@/Components/Home/JobsSection/JobsSection";
 import FinalCTASection from "@/Components/Home/FinalCTASection/FinalCTASection";
-import ReviewsSection from "@/Components/Home/ReviewsSection/ReviewsSection";
 import './page.module.css';
 
 
@@ -15,8 +14,7 @@ export default function HomePage() {
       <HeroSection />
       <ServicesSection/>
       <HowItWorksSection/>
-      <WhyChooseUsSection/> 
-      <ReviewsSection/>      
+      <WhyChooseUsSection/>    
       <ContactUsSection />
       <JobsSection />
       <FinalCTASection />

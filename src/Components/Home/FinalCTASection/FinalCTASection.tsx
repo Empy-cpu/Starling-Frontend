@@ -12,7 +12,7 @@ export default function FinalCTASection() {
             Ready for a Spotless Space?
           </Typography>
           <Typography variant="h6" className="final-cta-subtitle">
-            Join thousands of satisfied customers across Melbourne
+           
           </Typography>
           <Box className="final-cta-actions">
             <Link href="/booking" passHref>

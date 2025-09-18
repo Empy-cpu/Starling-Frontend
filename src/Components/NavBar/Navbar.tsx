@@ -29,7 +29,7 @@ import {
   ContactMail,
   AttachMoney,
  
-  Star,
+ // Star,
 } from "@mui/icons-material";
 
 import { getCurrentUser } from "@/services/Auth/auth";
@@ -122,12 +122,12 @@ export default function Navbar() {
       ],
     },
    
-    { 
+  /*  { 
       label: "Reviews", 
       href: "#reviews", 
       icon: <Star />,
       onClick: (e: React.MouseEvent) => handleSectionNavigation('#reviews', e)
-    },
+    },*/
     { 
       label: "Contact", 
       href: "#contact", 

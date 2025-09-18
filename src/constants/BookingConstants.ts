@@ -37,7 +37,7 @@ export const CREDIT_CARD_FEE_PERCENTAGE = 0.0; // 1.5%
 
 export const paymentMethods = [
   { value: "credit_card", label: "Credit/Debit Card" },
-  { value: "cash_on_delivery", label: "Cash on Delivery" }
+  { value: "cash_on_delivery", label: "Cash" }
 ];
 
 export interface ExtraAsset {
