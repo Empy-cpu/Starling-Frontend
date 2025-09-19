@@ -24,7 +24,7 @@ export default function ServicesSection() {
       title: "End of Lease Cleaning",
       description: "Comprehensive cleaning to get your bond back guaranteed",
       icon: <Security />,
-      price: "From $335",
+      price: "From $295",
       link: "/services-pages/end-of-lease-cleaning-page",
     },
   ];

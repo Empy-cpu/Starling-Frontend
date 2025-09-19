@@ -201,7 +201,7 @@ export default function EndOfLeaseCleaningPage() {
                       1 Bedroom
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $335
+                      $295
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -209,7 +209,7 @@ export default function EndOfLeaseCleaningPage() {
                       2 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $415
+                      $325
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -217,7 +217,7 @@ export default function EndOfLeaseCleaningPage() {
                       3 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $495
+                      $395
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -225,7 +225,7 @@ export default function EndOfLeaseCleaningPage() {
                       4 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $595
+                      $485
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -233,7 +233,7 @@ export default function EndOfLeaseCleaningPage() {
                       5 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $675
+                      $565
                     </Typography>
                   </Box>
                   <Box className="pricing-item featured">
@@ -241,7 +241,7 @@ export default function EndOfLeaseCleaningPage() {
                       6 Bedrooms
                     </Typography>
                     <Typography variant="h4" className="price">
-                      $725
+                      $625
                     </Typography>
                   </Box>
                 </Box>
